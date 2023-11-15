@@ -1,12 +1,10 @@
 <template>
   <div>
     <NavBar/>
-    <CarHero/>
-    <CarSearchBar/>
+    <Hero/>
   </div>
 </template>
 <script setup lang="ts">
 import NavBar from "~/component/NavBar.vue";
-import CarHero from "~/component/CarHero.vue";
-import CarSearchBar from "~/component/CarSearchBar.vue";
+import Hero from "~/component/Car/Hero.vue";
 </script>

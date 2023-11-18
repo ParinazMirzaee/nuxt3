@@ -1,9 +1,13 @@
 <template>
   <header
-      class="sticky top-0 z-50 flex justify-between items-center space-x-1 border-b bg-white p-4 shadow-md"
+      class="bg-warning w-100 p-5"
   >
-    <a class="text-3xl font-mono" href="">cartrader</a>
+    <a class="" href="">cartrader</a>
   </header>
+  <button class="bg-warning text-white">fmvlfk</button>
 </template>
 <script setup lang="ts">
 </script>
+<style scoped>
+
+</style>

@@ -1,0 +1,171 @@
+@import "colors";
+@import "components";
+
+body {
+  font-family: 'iranyekan', serif !important;
+}
+
+.en-font {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: inherit !important;
+}
+
+.object-fit-cover {
+  object-fit: cover !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.main-content-wrapper {
+  padding: 32px 0;
+  background-color: $white;
+  border-radius: 10px;
+  height: calc(100vh - 104px) !important;
+}
+
+.main-content {
+  background-color: $white;
+  padding: 0 32px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+
+.main-content-title {
+  color: $gray1;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.mt-40px {
+  margin-top: 40px !important;
+}
+
+.mb-40px {
+  margin-bottom: 40px !important;
+}
+
+.mt-32px {
+  margin-top: 32px !important;
+}
+
+.mb-32px {
+  margin-bottom: 32px !important;
+}
+
+.mt-20px {
+  margin-top: 20px !important;
+}
+
+.mb-20px {
+  margin-bottom: 20px !important;
+}
+
+.gap-24px {
+  gap: 24px !important;
+}
+
+.gap-12px {
+  gap: 12px !important;
+}
+
+.gap-16px {
+  gap: 16px !important;
+}
+
+.aspect-ratio {
+  aspect-ratio: 1/1 !important;
+}
+
+// scrollbar
+
+.scrollbar {
+  scrollbar-color: #D9D9D9 white;
+  scrollbar-border-radius: 20px;
+  scrollbar-border: 3px solid white;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9 !important;
+  border-radius: 20px;
+  //border: 3px solid white;
+}
+
+.scrollbar-hover {
+  direction: ltr;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scrollbar-width: thin;
+  scrollbar-position: absolute;
+  scrollbar-color: #cff3e8 #ffffff;
+  scrollbar-border-radius: 17px;
+  scrollbar-border: 4px solid #ffffff;
+}
+
+.scrollbar-hover::-webkit-scrollbar {
+  width: 15px;
+}
+
+.scrollbar-hover::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.scrollbar-hover::-webkit-scrollbar-thumb {
+  background-color: #86baba;
+  border-radius: 17px;
+  border: 4px solid #ffffff;
+}
+
+// end scrollbar
+
+
+// shimmer
+
+
+.shine {
+  background: #f6f7f8 linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%) no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -400% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// end shimmer

@@ -6,7 +6,7 @@
     >
       <div class="mt-5 d-flex">
         <SideBar/>
-        <Cards/>
+        <Card/>
       </div>
     </div>
 

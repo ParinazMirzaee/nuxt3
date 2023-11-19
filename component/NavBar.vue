@@ -1,13 +1,20 @@
 <template>
   <header
-      class="bg-warning w-100 p-5"
+      class="w-100 container-fluid bg-light m-0 p-3"
   >
-    <a class="" href="">cartrader</a>
+    <a class="fs-1 text-decoration-none" href="">cartrader</a>
   </header>
-  <button class="bg-warning text-white">fmvlfk</button>
 </template>
 <script setup lang="ts">
 </script>
 <style scoped>
+
+a{
+  color: #464c50;
+}
+
+a:hover{
+  color: #464c50;
+}
 
 </style>

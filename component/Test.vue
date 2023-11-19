@@ -8,16 +8,15 @@
       />
       <div class="px-6 py-4 pb-2">
         <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
+        <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam architecto at atque aut earum et,
+          eveniet exercitationem fugiat in magni maiores minus non quo ratione, sed temporibus voluptas voluptatum.
         </p>
       </div>
       <div class="px-6 py-4">
-        <span class="badge mr-2">#photography</span>
-        <span class="badge mr-2">#travel</span>
-        <span class="badge">#winter</span>
+        <span class="badge cursor mx-1">#photography</span>
+        <span class="badge cursor mx-1">#travel</span>
+        <span class="badge cursor mx-1">#winter</span>
       </div>
     </div>
   </div>
@@ -25,9 +24,13 @@
 
 <style lang="postcss" scoped>
 .badge {
-  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
-  &:hover {
-    @apply bg-gray-300;
-  }
+  display: inline-block;
+  background-color: #6c757d;
+  opacity: 100;
+  border-radius: 20px;
+}
+
+.badge:hover{
+  background-color: #474b4e;
 }
 </style>

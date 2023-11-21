@@ -2,7 +2,7 @@
   <header
       class="w-100 container-fluid bg-light m-0 p-3"
   >
-    <a class="fs-1 text-decoration-none" href="">cartrader</a>
+    <NuxtLink class="fs-1 text-decoration-none" to="/">cartrader</NuxtLink>
   </header>
 </template>
 <script setup lang="ts">

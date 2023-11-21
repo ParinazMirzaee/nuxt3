@@ -13,7 +13,6 @@ import NavBar from "~/component/NavBar.vue";
 
 <template>
   <div>
-    <NavBar/>
     <div
         class="mx-auto mt-4 px-4 pb-3"
     >

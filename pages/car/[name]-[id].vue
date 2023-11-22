@@ -1,25 +1,37 @@
 <script setup lang="ts">
-const route=useRoute()
+const route = useRoute()
+// const {toTitleCase} = useUtilities
+
 useHead({
   title: route.params.name.toUpperCase()
 })
+/*
+useHead({
+  title: toTitleCase(route.params.name)
+})
+*/
+
+definePageMeta({
+  layout: 'custom'
+})
+
+/*function toTitleCase(str) {
+  return str.replace(/\w\S*!/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}*/
 
 import Detail from "~/component/Car/Details/Detail.vue";
 import Attributes from "~/component/Car/Details/Attributes.vue";
 import Description from "~/component/Car/Details/Description.vue";
 import Contact from "~/component/Car/Details/Contact.vue";
-import NavBar from "~/component/NavBar.vue";
 </script>
 
 <template>
   <div>
-    <div
-        class="mx-auto mt-4 px-4 pb-3"
-    >
       <Detail/>
       <Attributes/>
       <Description/>
       <Contact/>
-    </div>
   </div>
 </template>

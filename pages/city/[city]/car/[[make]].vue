@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Card/>
+    <Cards/>
   </div>
 </template>
 <script setup lang="ts">
-import Card from "~/component/Car/Card.vue";
+import Cards from "~/component/Car/Cards.vue";
 </script>

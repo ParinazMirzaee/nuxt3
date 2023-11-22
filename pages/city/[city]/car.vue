@@ -31,8 +31,18 @@ import nuxtLayout from "#app/components/nuxt-layout";
 <template>
   <div>
     <div class="mt-5 d-flex">
-      <SideBar/>
-      <NuxtPage/>
+      <NuxtErrorBoundary>
+        <SideBar/>
+        <NuxtPage/>
+        <template #error="{error}">
+          <h1>sorry, something went wrong</h1>
+          <code>{{ error }}</code>
+          <button class="text-white rounded bg-secondary mt-3 p-3" @click="error.value = null">Go Back</button>
+          <div class="text-center mx-auto d-flex flex-column">
+
+          </div>
+        </template>
+      </NuxtErrorBoundary>
     </div>
   </div>
 

@@ -1,21 +1,41 @@
+<script>
+import car from "../../../pages/city/[city]/car.vue";
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  computed: {
+    car() {
+      return car
+    }
+  }
+})
+
+
+const props = defineProps({
+  car: {
+    type: Object
+  }
+})
+</script>
+
 <template>
   <div class="mt-10">
     <img
-        src="https://carwow-uk-wp-3.imgix.net/Volvo-XC40-white-scaled.jpg"
+        :src="car.url"
         class="w-50"
         alt=""
     />
-    <h1 class="mt-3">Volvo 3XT</h1>
+    <h1 class="mt-3">{{ car.name }}</h1>
     <div
         class="d-flex text-lg mt-3 border pb-5 justify-content-between"
     >
       <div class="d-flex">
-        <p class="mx-2">5 seats</p>
+        <p class="mx-2">{{ car.seats }} seats</p>
         <p class="mx-2">|</p>
-        <p class="mx-2">67,444 miles</p>
+        <p class="mx-2">{{ car.miles }} miles</p>
       </div>
       <div>
-        <p class="font-bold ">$25,555</p>
+        <p class="font-bold ">${{ car.price }}</p>
       </div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SideBar from "~/component/Car/SideBar.vue";
+import Card from "~/component/Car/Card.vue";
 
 const route = useRoute()
 // const {toTitleCase} = useUtilities()
@@ -22,7 +24,6 @@ useHead({
 definePageMeta({
   layout: 'custom'
 })
-import SideBar from "~/component/Car/SideBar.vue";
 import nuxtLayout from "#app/components/nuxt-layout";
 // import {useUtilities} from "#imports";
 </script>

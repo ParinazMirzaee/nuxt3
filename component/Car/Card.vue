@@ -1,8 +1,9 @@
 <script setup>
 const props = defineProps({
-  car: Object,
+  car: {
+    type: Object
+  }
 })
-
 </script>
 
 <template>
@@ -11,6 +12,7 @@ const props = defineProps({
       @click="navigateTo(`/car/${car.name}-${car.id}`)"
   >
     <div class="flex w-100">
+
       <img
           :src="car.url"
           alt=""

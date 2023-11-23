@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: [
-        "@nuxt/image"
+        "@nuxt/image",
+        "@vueuse/nuxt"
     ],
     css: [
         '@/public/css/bootstrap.min.css',

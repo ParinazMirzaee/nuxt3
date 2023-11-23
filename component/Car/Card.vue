@@ -1,22 +1,25 @@
 <script setup>
 import heartFilled from "~/assets/002 heartFilled.png"
 import heartOutline from "~/assets/002 heartOutline.png"
-import {useState} from "#app";
+
 const props = defineProps({
   car: {
     type: Object
+  },
+  favored: {
+    type: Boolean
   }
 })
-const favored = useState(`favored-${props.car.id}`, ()=>{
-  return false
-})
+const emit = defineEmits(['favor'])
+
 </script>
 
 <template>
   <div
       class="position-relative shadow border overflow-hidden m-5 cursor-pointer h-25"
   >
-    <img class="position-absolute w-5 cursor" :src="favored ? heartFilled : heartOutline" alt="" @click="favored = !favored">
+    <img class="position-absolute w-5 cursor" :src="favored ? heartFilled : heartOutline" alt=""
+         @click="emit('favor',car.id)">
 
     <div class="d-flex">
       <NuxtImg
@@ -39,7 +42,7 @@ const favored = useState(`favored-${props.car.id}`, ()=>{
 </template>
 
 <style scoped>
-.w-5{
+.w-5 {
   width: 25px;
   right: 20px;
   top: 20px;

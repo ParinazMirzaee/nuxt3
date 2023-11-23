@@ -8,14 +8,14 @@ const props = defineProps({
 
 <template>
   <div
-      class="shadow border overflow-hidden m-5 cursor-pointer w-25"
+      class="shadow border overflow-hidden m-5 cursor-pointer w-50"
       @click="navigateTo(`/car/${car.name}-${car.id}`)"
   >
-    <div class="flex w-100">
+    <div class="d-flex">
       <NuxtImg
           :src="car.url"
           alt=""
-          class="w-75"
+          class="w-25 aspect-ratio"
       />
       <div class="p-4 d-flex">
         <div>
@@ -29,3 +29,7 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>

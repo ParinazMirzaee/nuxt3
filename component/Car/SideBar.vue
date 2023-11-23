@@ -1,14 +1,13 @@
 <script setup>
-import router from "#app/plugins/router.js";
-import {useRoute} from "#app";
 
+import {useRoute} from "#app";
+const city = ref("");
+const route = useRoute();
 const modal = ({
   location: false,
   make: false,
   price: false
 })
-const city = ref("");
-const route = useRoute();
 const updateModal = (key) => {
   modal.value[key] = !modal.value[key]
 }

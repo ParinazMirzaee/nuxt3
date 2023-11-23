@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="relative w-100" src="https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg" alt="">
+    <NuxtImg class="relative w-100" src="https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg" alt=""/>
 
     <div class="absolute z-3 top-0 w-100">
       <div class=" d-flex justify-content-center align-items-center">

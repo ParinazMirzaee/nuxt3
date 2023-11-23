@@ -1,21 +1,19 @@
-<script>
-import car from "../../../pages/city/[city]/car.vue";
-import {defineComponent} from "vue";
-
-export default defineComponent({
-  computed: {
-    car() {
-      return car
-    }
-  }
-})
-
+<script setup>
 
 const props = defineProps({
   car: {
     type: Object
   }
 })
+
+
+/*export default defineComponent({
+  computed: {
+    car() {
+      return car
+    }
+  }
+})*/
 </script>
 
 <template>

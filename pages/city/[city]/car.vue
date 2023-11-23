@@ -1,35 +1,30 @@
-<script setup lang="ts">
+<script setup>
 import SideBar from "~/component/Car/SideBar.vue";
-import Card from "~/component/Car/Card.vue";
 
 const route = useRoute()
-// const {toTitleCase} = useUtilities()
 
 useHead({
-  title: `${route.params.make ? route.params.make.toUpperCase() : 'Cars'} in ${route.params.city.toUpperCase()}`
+  title: `${route.params.make ? route.params.make.toUpperCase() : ['Cars']} in ${route.params.city.toUpperCase()}`
 })
 
 /*
 useHead({
   title: toTitleCase(route.params.name)
 })
-*/
-
-/*function toTitleCase(str) {
+const {toTitleCase} = useUtilities()
+function toTitleCase(str) {
   return str.replace(/\w\S*!/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
-}*/
+}
+*/
 
-definePageMeta({
-  layout: 'custom'
-})
-import nuxtLayout from "#app/components/nuxt-layout";
-// import {useUtilities} from "#imports";
+
 </script>
 
 <template>
   <div>
+    <NuxtLayout name="custom">
     <div class="mt-5 d-flex">
       <NuxtErrorBoundary>
         <SideBar/>
@@ -44,6 +39,6 @@ import nuxtLayout from "#app/components/nuxt-layout";
         </template>
       </NuxtErrorBoundary>
     </div>
+    </NuxtLayout>
   </div>
-
 </template>

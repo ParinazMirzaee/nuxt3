@@ -10,7 +10,9 @@ import Hero from "~/component/Car/Hero.vue";
 
 <template>
   <div class="">
+    <NuxtLayout name="default">
       <Hero/>
+    </NuxtLayout>
   </div>
 </template>
 

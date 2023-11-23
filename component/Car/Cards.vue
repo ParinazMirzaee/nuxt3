@@ -5,6 +5,7 @@
 </template>
 <script setup lang="ts">
 import Card from "~/component/Car/Card.vue";
+import {useCars} from "~/composables/useCars";
 
 const {cars} = useCars()
 </script>

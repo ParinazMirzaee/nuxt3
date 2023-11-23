@@ -12,7 +12,6 @@ const props = defineProps({
       @click="navigateTo(`/car/${car.name}-${car.id}`)"
   >
     <div class="flex w-100">
-
       <img
           :src="car.url"
           alt=""
@@ -22,10 +21,10 @@ const props = defineProps({
         <div>
           <h1 class=" ">{{ car.name }}</h1>
           <p class="">
-            {{ car.description}}
+            {{ car.description }}
           </p>
         </div>
-        <h1 class="mt-auto">${{car.price}}</h1>
+        <h1 class="mt-auto">${{ car.price }}</h1>
       </div>
     </div>
   </div>

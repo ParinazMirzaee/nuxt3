@@ -19,7 +19,6 @@ function toTitleCase(str) {
 }
 */
 
-
 </script>
 
 <template>

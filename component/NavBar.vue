@@ -5,17 +5,21 @@ const supabase = useSupabaseClient()
 const logout = async () => {
   // 1) make user.value = null
   // 2) remove JWT from cookie browser
-  const {error} = supabase.auth.signOut();
+  // const {error} = supabase.auth.signOut();
 
   try {
-    await $fetch("/api/_supabase/session",{
+    await $fetch("/api/_supabase/session", {
       method: "POST",
-      body: {event:"SIGNED_OUT", session:null},
+      body: {event: "SIGNED_OUT", session: null},
     });
-  }
-  catch (error){
+  } catch (error) {
     console.log(error)
   }
+
+  user.value = null;
+  navigateTo("/");
+
+
   /*if (error) {
     console.log(error);
   }*/

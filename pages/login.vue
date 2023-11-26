@@ -49,7 +49,6 @@ async function signOut() {
   <NuxtLayout name="custom">
     <div>
       <h1 class="font-bold">Login</h1>
-{{user}}
       <button @click="signInWithGithub" class="bg-primary border-0 rounded text-white">
         login with GITHUB
       </button>

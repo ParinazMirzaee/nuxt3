@@ -1,5 +1,16 @@
 <script setup>
 const user = useSupabaseUser()
+const supabase = useSupabaseClient()
+
+const logout = () => {
+  // 1) make user.value = null
+  // 2) remove JWT from cookie browser
+  const {error} = supabase.auth.signOut();
+  if (error) {
+    console.log(error);
+  }
+  // 3) navigate to home page
+}
 </script>
 
 <template>
@@ -9,7 +20,7 @@ const user = useSupabaseUser()
     <NuxtLink class="fs-1 text-decoration-none" to="/">cartrader</NuxtLink>
     <div v-if="user" class="d-flex mt-3 me-3">
       <NuxtLink to="/profile/listings" class="me-5">Profile</NuxtLink>
-      <p class="cursor">Logout</p>
+      <p class="cursor" @click="logout">Logout</p>
     </div>
     <NuxtLink v-else to="/login">Login</NuxtLink>
   </header>

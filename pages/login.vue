@@ -2,7 +2,20 @@
 const supabase = useSupabaseClient()
 const user = useSupabaseUser()
 
-async function signUpNewUser() {
+async function signInWithGithub() {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'github',
+  });
+  if (error){
+    console.log(error)
+  }
+}
+async function signOut() {
+  const { error } = await supabase.auth.signOut()
+}
+
+
+/*async function signUpNewUser() {
   const { data, error } = supabase.auth.signUp({
     email: 'example@email.com',
     password: 'example-password',
@@ -20,10 +33,7 @@ async function signInWithEmail() {
 
 async function signOut() {
   const { error } = supabase.auth.signOut()
-}
-
-
-
+}*/
 /*const login = async () => {
   const {error} = supabase.auth.signInWithOAuth({
     provider: "github"
@@ -39,11 +49,9 @@ async function signOut() {
   <NuxtLayout name="custom">
     <div>
       <h1 class="font-bold">Login</h1>
-      <button @click="signUpNewUser" class="bg-secondary border-0 rounded text-white">
-        signup with email
-      </button>
-      <button @click="signInWithEmail" class="bg-primary border-0 rounded text-white">
-        login
+{{user}}
+      <button @click="signInWithGithub" class="bg-primary border-0 rounded text-white">
+        login with GITHUB
       </button>
       <button @click="signOut" class="bg-danger border-0 rounded text-white">
         signOut

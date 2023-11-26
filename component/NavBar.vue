@@ -2,13 +2,23 @@
 const user = useSupabaseUser()
 const supabase = useSupabaseClient()
 
-const logout = () => {
+const logout = async () => {
   // 1) make user.value = null
   // 2) remove JWT from cookie browser
   const {error} = supabase.auth.signOut();
-  if (error) {
-    console.log(error);
+
+  try {
+    await $fetch("/api/_supabase/session",{
+      method: "POST",
+      body: {event:"SIGNED_OUT", session:null},
+    });
   }
+  catch (error){
+    console.log(error)
+  }
+  /*if (error) {
+    console.log(error);
+  }*/
   // 3) navigate to home page
 }
 </script>

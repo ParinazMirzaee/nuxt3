@@ -2,9 +2,7 @@
 
 import Message from "~/component/Car/Message.vue";
 
-definePageMeta({
-  middleware: ["auth"]
-});
+
 </script>
 
 <template>

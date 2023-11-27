@@ -5,9 +5,7 @@ import Image from "~/component/Car/Ad/Image.vue";
 import Textarea from "~/component/Car/Ad/Textarea.vue";
 
 const { makes } = useCars();
-definePageMeta({
-  middleware: ["auth"]
-});
+
 
 const info = useState("adInfo", () => {
   return {

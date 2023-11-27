@@ -3,7 +3,6 @@ import Listing from "~/component/Car/Listing.vue";
 
 definePageMeta({
   layout: "custom",
-  middleware: ["auth"]
 });
 
 const {listings} = useCars();

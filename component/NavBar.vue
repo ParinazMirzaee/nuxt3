@@ -5,7 +5,7 @@ const supabase = useSupabaseClient()
 const logout = async () => {
   // 1) make user.value = null
   // 2) remove JWT from cookie browser
-  // const {error} = supabase.auth.signOut();
+  const {error} = supabase.auth.signOut();
 
   try {
     await $fetch("/api/_supabase/session", {
@@ -39,7 +39,7 @@ const logout = async () => {
     <NuxtLink v-else to="/login">Login</NuxtLink>
   </header>
 </template>
-<script setup lang="ts">
+<script setup>
 </script>
 <style scoped>
 

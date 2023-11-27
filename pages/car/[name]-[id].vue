@@ -15,7 +15,7 @@ const car = computed(() => {
     return c.id === parseInt(route.params.id);
   })
 });
-//serverside error(because we go to the direct url)
+
 if (!car.value) {
   throw createError({
     statusCode: 404,
@@ -26,17 +26,6 @@ definePageMeta({
   layout: 'custom'
 });
 
-/*const {toTitleCase} = useUtilities
-
-useHead({
-  title: toTitleCase(route.params.name)
-})
-
-function toTitleCase(str) {
-  return str.replace(/\w\S*!/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-}*/
 </script>
 
 <template>

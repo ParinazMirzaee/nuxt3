@@ -25,10 +25,10 @@ const emit = defineEmits(['favor'])
       <NuxtImg
           :src="car.url"
           alt=""
-          class="w-25 aspect-ratio cursor"
+          class="w-25 cursor"
           @click="navigateTo(`/car/${car.name}-${car.id}`)"
       />
-      <div class="p-4 d-flex">
+      <div class="p-4 d-flex flex-column">
         <div>
           <h1 class=" ">{{ car.name }}</h1>
           <p class="">

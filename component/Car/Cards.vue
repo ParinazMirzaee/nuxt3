@@ -1,8 +1,9 @@
 <script setup>
 import Card from "~/component/Car/Card.vue";
-import {useCars} from "~/composables/useCars";
 
-const {cars} = useCars()
+const props = defineProps({
+  cars: Array
+})
 const favourite = useLocalStorage("favourite", {});
 const handleFavourite = (id) => {
   if (id in favourite.value) {

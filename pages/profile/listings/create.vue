@@ -6,15 +6,7 @@ import Textarea from "~/component/Car/Ad/Textarea.vue";
 
 const { makes } = useCars();
 definePageMeta({
-  middleware: [
-    function (to, from) {
-      const user = useSupabaseUser();
-      if (user.value) {
-        return;
-      }
-      return navigateTo("/login")
-    }
-  ]
+  middleware: ["auth"]
 });
 
 const info = useState("adInfo", () => {

@@ -24,6 +24,5 @@ export default defineEventHandler((event) => {
             return car.price <= parseInt(maxPrice);
         })
     }
-
     return filteredCars;
 })

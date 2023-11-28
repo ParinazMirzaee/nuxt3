@@ -25,7 +25,7 @@ const priceRange = ref({
   max: ""
 })
 const {makes} = useCars();
-const modal = ({
+const modal = ref({
   location: false,
   make: false,
   price: false
@@ -73,7 +73,7 @@ const onChangePrice = () => {
       <h3 @click="updateModal('location')" class="text-primary uppercase">
         {{ route.params.city }}
       </h3>
-      <div v-if="modal.location" class="position-absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
+      <div v-if="modal.location" class="position-absolute border shadow p-5 bg-white apply-btn">
         <input type="text" class="border p-1 rounded" v-model="city"/>
         <button @click="onChangeLocation" class="bg-blue-400 w-full mt-2 rounded text-white p-1">
           Apply
@@ -129,5 +129,10 @@ const onChangePrice = () => {
   top: 40px;
   z-index: 1;
   left: 370px;
+}
+
+.apply-btn{
+  z-index: 10;
+  left: 350px;
 }
 </style>

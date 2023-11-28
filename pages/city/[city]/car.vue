@@ -7,18 +7,6 @@ useHead({
   title: `${route.params.make ? route.params.make.toUpperCase() : ['Cars']} in ${route.params.city.toUpperCase()}`
 })
 
-/*
-useHead({
-  title: toTitleCase(route.params.name)
-})
-const {toTitleCase} = useUtilities()
-function toTitleCase(str) {
-  return str.replace(/\w\S*!/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-}
-*/
-
 </script>
 
 <template>

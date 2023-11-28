@@ -1,8 +1,6 @@
 <script setup>
 const props = defineProps({
-  features: {
-    type: Array
-  }
+  features: Array
 })
 </script>
 

@@ -22,17 +22,17 @@ if (!car.value) {
     message: `Car with id of ${(route.params.id)} does not exist`,
   })
 }
-definePageMeta({
-  layout: 'custom'
-});
+
 
 </script>
 
 <template>
-  <div>
-    <Detail :car="car"/>
-    <Attributes :features="car.features"/>
-    <Description :description="car.description"/>
-    <Contact/>
-  </div>
+  <NuxtLayout name="custom">
+    <div v-if="car">
+      <Detail :car="car"/>
+      <Attributes :features="car.features"/>
+      <Description :description="car.description"/>
+      <Contact/>
+    </div>
+  </NuxtLayout>
 </template>

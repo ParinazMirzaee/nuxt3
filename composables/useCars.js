@@ -3,9 +3,9 @@ import makes from "~/data/makes.json"
 import listings from "~/data/listings.json"
 
 export const useCars = () => {
-    return ({
+    return {
         cars,
         makes,
         listings
-    });
+    };
 };

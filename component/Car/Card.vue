@@ -3,12 +3,8 @@ import heartFilled from "~/assets/002 heartFilled.png"
 import heartOutline from "~/assets/002 heartOutline.png"
 
 const props = defineProps({
-  car: {
-    type: Object
-  },
-  favored: {
-    type: Boolean
-  }
+  car: Object,
+  favored: Boolean
 })
 const emit = defineEmits(['favor'])
 

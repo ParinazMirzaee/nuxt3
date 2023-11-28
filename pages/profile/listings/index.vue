@@ -1,10 +1,6 @@
 <script setup>
 import Listing from "~/component/Car/Listing.vue";
 
-definePageMeta({
-  layout: "custom",
-});
-
 const {listings} = useCars();
 
 </script>

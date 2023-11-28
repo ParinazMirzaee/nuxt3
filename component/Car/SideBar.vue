@@ -5,20 +5,6 @@ import {useCars} from "~/composables/useCars.js";
 
 const route = useRoute();
 const router = useRouter();
-console.log(route.query);
-const priceRangeText = computed(() => {
-  const minPrice = route.query.minPrice;
-  const maxPrice = route.query.maxPrice;
-
-  if (!minPrice && !maxPrice) return "Any";
-  else if (!minPrice && maxPrice) {
-    return `< $${maxPrice}`
-  } else if (minPrice && !maxPrice) {
-    return `> $${minPrice}`
-  } else {
-    return `$${minPrice}-$${maxPrice}`
-  }
-});
 const city = ref("");
 const priceRange = ref({
   min: "",
@@ -30,6 +16,21 @@ const modal = ref({
   make: false,
   price: false
 })
+
+console.log(route.query);
+const priceRangeText = computed(() => {
+  const minPrice = route.query.minPrice;
+  const maxPrice = route.query.maxPrice;
+
+  if (!minPrice && !maxPrice) return "Any";
+  else if (!minPrice && maxPrice) {
+    return `< $${maxPrice}`;
+  } else if (minPrice && !maxPrice) {
+    return `> $${minPrice}`;
+  } else {
+    return `$${minPrice}-$${maxPrice}`;
+  }
+});
 const updateModal = (key) => {
   modal.value[key] = !modal.value[key]
 }
@@ -67,7 +68,7 @@ const onChangePrice = () => {
 
 <template>
   <div class="shadow border w-64 mr-10 z-30 h-[190px]">
-    <!--    LOCATION START-->
+    <!--LOCATION START-->
     <div class="p-5 d-flex justify-content-between position-relative cursor border-b">
       <h3>Location</h3>
       <h3 @click="updateModal('location')" class="text-primary uppercase">
@@ -75,12 +76,12 @@ const onChangePrice = () => {
       </h3>
       <div v-if="modal.location" class="position-absolute border shadow p-5 bg-white apply-btn">
         <input type="text" class="border p-1 rounded" v-model="city"/>
-        <button @click="onChangeLocation" class="bg-blue-400 w-full mt-2 rounded text-white p-1">
+        <button @click="onChangeLocation" class="bg-primary text-white w-100 mt-2 rounded p-1">
           Apply
         </button>
       </div>
     </div>
-    <!--    LOCATION END-->
+    <!--LOCATION END-->
 
     <!--MAKE START-->
     <div class="p-5 w-100 d-flex justify-content-between position-relative cursor border-b">
@@ -98,7 +99,7 @@ const onChangePrice = () => {
     </div>
     <!--MAKE END-->
 
-    <!--    PRICE START-->
+    <!--PRICE START-->
     <div class="p-5 d-flex justify-content-between position-relative cursor">
       <h3>Price</h3>
       <h3 class="text-primary capitalize" @click="updateModal('price')">
@@ -115,7 +116,7 @@ const onChangePrice = () => {
         </button>
       </div>
     </div>
-    <!--    PRICE END-->
+    <!--PRICE END-->
   </div>
 </template>
 <style scoped>

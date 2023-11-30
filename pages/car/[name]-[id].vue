@@ -3,25 +3,15 @@ import Detail from "~/component/Car/Details/Detail.vue";
 import Attributes from "~/component/Car/Details/Attributes.vue";
 import Description from "~/component/Car/Details/Description.vue";
 import Contact from "~/component/Car/Details/Contact.vue";
+import useFetchCar from "~/composables/useFetchCar.js";
 
 const route = useRoute();
-const {cars} = useCars();
+const {data: car} = await useFetchCar(route.params.id);
+
 useHead({
   title: route.params.name.toUpperCase()
 });
 
-const car = computed(() => {
-  return cars.find((c) => {
-    return c.id === parseInt(route.params.id);
-  })
-});
-
-if (!car.value) {
-  throw createError({
-    statusCode: 404,
-    message: `Car with id of ${(route.params.id)} does not exist`,
-  })
-}
 
 
 </script>

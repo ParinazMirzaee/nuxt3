@@ -1,9 +1,8 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   title: "cartrader",
 });
 
-import NavBar from "~/component/NavBar.vue";
 import Hero from "~/component/Car/Hero.vue";
 
 </script>

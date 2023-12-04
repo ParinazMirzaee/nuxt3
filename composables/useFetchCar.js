@@ -6,5 +6,6 @@ export default async (id) => {
             statusMessage: error.value.statusMessage
         });
     }
+    console.log(data)
     return data
 }

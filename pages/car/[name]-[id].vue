@@ -7,7 +7,7 @@ import useFetchCar from "~/composables/useFetchCar.js";
 
 const route = useRoute();
 // const {data: car} = await useFetchCar(route.params.id);
-const {data:car, error} = await useFetch(`/api/car/${route.params.id}`);
+const {data: car, error} = await useFetch(`/api/car/${route.params.id}`);
 if (error.value) {
   throw createError({
     statusCode: error.value.statusCode,
@@ -17,7 +17,6 @@ if (error.value) {
 useHead({
   title: route.params.name.toUpperCase()
 });
-
 
 
 </script>

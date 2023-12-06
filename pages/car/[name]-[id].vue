@@ -3,7 +3,6 @@ import Detail from "~/component/Car/Details/Detail.vue";
 import Attributes from "~/component/Car/Details/Attributes.vue";
 import Description from "~/component/Car/Details/Description.vue";
 import Contact from "~/component/Car/Details/Contact.vue";
-import useFetchCar from "~/composables/useFetchCar.js";
 
 const route = useRoute();
 const user = useSupabaseUser()
@@ -25,7 +24,6 @@ useHead({
 <template>
   <NuxtLayout name="custom">
     <div v-if="car">
-      {{ user.id }}
       <Detail :car="car"/>
       <Attributes :features="car.features"/>
       <Description :description="car.description"/>

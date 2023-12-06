@@ -6,6 +6,33 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL")
+}
+
+model Car {
+  id            Int       @id @default(autoincrement())
+  name          String
+  numberOfSeats String
+  miles         Int
+  features      String[]
+  image         String
+  price         Int
+  description   String
+  model         String
+  make          String
+  city          String
+  listerId      String
+  messages      Message[]
+}
+
+model Message {
+  id        Int    @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  message   String
+  listingId Int
+  listing   Car    @relation(fields: [listingId], references: [id])
 }

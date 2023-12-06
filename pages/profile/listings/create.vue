@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Select from "~/component/Car/Ad/Select.vue";
 import Input from "~/component/Car/Ad/Input.vue";
 import Image from "~/component/Car/Ad/Image.vue";
@@ -23,7 +23,7 @@ const info = useState("adInfo", () => {
 });
 
 const onChangeInput = (data, name) => {
-  info.value[name] = data;
+  info["value"][name] = data;
 };
 
 const inputs = [

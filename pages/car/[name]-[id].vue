@@ -6,6 +6,7 @@ import Contact from "~/component/Car/Details/Contact.vue";
 import useFetchCar from "~/composables/useFetchCar.js";
 
 const route = useRoute();
+const user = useSupabaseUser()
 // const {data: car} = await useFetchCar(route.params.id);
 const {data: car, error} = await useFetch(`/api/car/${route.params.id}`);
 if (error.value) {
@@ -24,6 +25,7 @@ useHead({
 <template>
   <NuxtLayout name="custom">
     <div v-if="car">
+      {{ user.id }}
       <Detail :car="car"/>
       <Attributes :features="car.features"/>
       <Description :description="car.description"/>

@@ -1,6 +1,6 @@
 import Joi from "joi";
 import {PrismaClient} from "@prisma/client";
-import city from "~/server/api/cars/[city].js";
+import city from "~/server/api/cars/[city].get.js";
 
 const prisma = new PrismaClient()
 
@@ -17,7 +17,7 @@ const schema = Joi.object({
     features: Joi.array().items(Joi.string()).required(),
     image: Joi.string().required(),
     listerId: Joi.string().required(),
-    price: Joi.number().min(0).required(),
+    price: Joi.number().min(0),
     name: Joi.string().required()
 })
 export default defineEventHandler(async (event) => {

@@ -44,15 +44,15 @@ export default defineEventHandler(async (event) => {
         listerId,
         price,
         name
-}
-    = body
+    }
+        = body
 
     const car = await prisma.car.create({
         data: {
             make,
             model,
             year,
-            miles:parseInt(miles),
+            miles: parseInt(miles),
             city: city.toLowerCase(),
             numberOfSeats,
             description,

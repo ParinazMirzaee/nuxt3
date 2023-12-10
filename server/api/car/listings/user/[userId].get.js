@@ -7,6 +7,12 @@ export default defineEventHandler(async (event) => {
     return prisma.car.findMany({
         where: {
             listerId: userId
+        },
+        select:{
+            image: true,
+            id: true,
+            name: true,
+            price: true
         }
     })
 })

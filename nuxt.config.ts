@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     css: [
         '@/public/css/bootstrap.min.css',
         '@/public/css/font.css',
-        '@/public/fontawesome/css/all.css',
         '@/public/css/index.css',
     ],
     app: {

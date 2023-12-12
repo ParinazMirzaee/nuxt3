@@ -10,11 +10,7 @@ export default defineNuxtConfig({
         '@/public/css/bootstrap.min.css',
         '@/public/css/font.css',
         '@/public/fontawesome/css/all.css',
-        '@/public/css/mds.bs.datetimepicker.style.css',
-        '@/public/css/owl.carousel.min.css',
-        '@/public/css/style.css',
-        '@/public/css/clockpicker.min.css',
-        '@/public/css/site.css',
+        '@/public/css/index.css',
     ],
     app: {
         head: {
